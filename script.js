@@ -30,14 +30,15 @@ function createCard(number) {
     cardInner.appendChild(cardBack);
     cardBack.className = "flip-card__back";
     // Вскрытие карты
-    card.addEventListener("click", () => {
+    let rotate = () => {
       let numberRandom = Math.round(Math.random() * (number - 1));
       cardInner.classList.toggle("rotate");
       let cards = document.querySelectorAll(".flip-card__back");
       cards[numberRandom].classList.add("flip-card__back-bug");
       let cardRest = document.querySelectorAll(".flip-card");
       cardRest.forEach((card) => card.addEventListener("click", deleteCards));
-    });
+    };
+    card.addEventListener("click", rotate);
   }
 }
 //простой, средний, сложный уровни
@@ -58,9 +59,10 @@ function chooseLevel(level) {
 }
 //старт игры
 const buttonPlay = document.getElementById("button");
-buttonPlay.addEventListener("click", () => {
+let startGame = () => {
   document.querySelector(".wrapper").style.display = "none";
   document.querySelector(".wrapper-game").style.display = "flex";
   let level = document.querySelector(".active").innerText;
   chooseLevel(level);
-});
+};
+buttonPlay.addEventListener("click", startGame);
