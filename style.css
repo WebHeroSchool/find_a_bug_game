@@ -16,8 +16,8 @@ img {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -40,10 +40,9 @@ body {
 .wrapper {
   max-width: 1440px;
   min-height: 100vh;
-  padding-left: 102px;
   position: relative;
   margin: 0 auto;
-  padding: 12.6vh 0 0 103px;
+  padding: 12.6vh 0 0 102px;
   width: auto;
   box-sizing: border-box;
 }
@@ -121,7 +120,7 @@ body {
 
 .button {
   font: bold 32px/36px Roboto, arial, helvetica, sans-serif;
-  color: #ffffff;
+  color: #fff;
   background-color: #d62b2e;
   border-color: #d62b2e;
   padding: 28px 84px;
@@ -234,6 +233,7 @@ body {
   .hard {
     width: 100%;
   }
+
   .card-1 {
     left: 60%;
     top: 47vh;
@@ -244,6 +244,7 @@ body {
     left: 72%;
     top: 50vh;
   }
+
   .wrapper {
     padding: 18vh 0 0 103px;
     box-sizing: border-box;
@@ -444,14 +445,11 @@ body {
 @media (max-width: 600px) and (orientation: landscape) {
   .title {
     font: bold 49px/70px Roboto, Arial, Helvetica, sans-serif;
+    line-height: 41px;
   }
 
   .wrapper {
     padding: 2rem;
-  }
-
-  .title {
-    line-height: 41px;
   }
 
   .subtitle {
@@ -480,6 +478,7 @@ body {
     min-width: 71px;
     height: 22vw;
   }
+
   .card-2 {
     left: 58.2%;
     top: 42vh;
@@ -504,12 +503,6 @@ body {
 
   .hard {
     width: 100%;
-  }
-
-  .flip-card {
-    width: 22vw;
-    min-width: 80px;
-    height: 35vw;
   }
 
   .title {
