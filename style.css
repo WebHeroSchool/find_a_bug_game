@@ -50,7 +50,7 @@ body {
 .wrapper-game {
   display: none;
   width: auto;
-  height: calc(100vh-73px);
+  height: calc(100vh - 73px);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -516,6 +516,7 @@ body {
     left: 58.2%;
     top: 42vh;
   }
+
   .wrapper-game {
     width: auto;
     height: 100vh;
@@ -530,7 +531,7 @@ body {
 @media (max-width: 550px) and (orientation: portrait) {
   .wrapper {
     width: 95%;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 28.8vh 0 0 0;
   }
 
